@@ -1,1 +1,18 @@
-<p>home works!</p>
+<div>
+  <div>
+    <p>MTG Set:</p>
+  </div>
+  <div>
+    <form>
+      <mat-form-field appearance="fill">
+        <mat-label>Magic Set</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="food">
+          <mat-option *ngFor="let set of sets" [value]="set.value">
+            {{set.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p> Selected Set: {{selectedValue}} </p>
+    </form>
+  </div>
+</div>
